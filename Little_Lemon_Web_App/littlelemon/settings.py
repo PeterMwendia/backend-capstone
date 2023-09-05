@@ -85,14 +85,15 @@ WSGI_APPLICATION = 'littlelemon.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': env("DATABASE_ENGINE"),
-        'NAME': env("DATABASE_NAME"),  
-        'USER': env("DATABASE_USER"), 
-        'PASSWORD': env("DATABASE_PASSWORD"),  
-        'HOST': env("DATABASE_HOST"),  
-        'PORT': env("DATABASE_PORT"),
+        'ENGINE': os.getenv("DATABASE_ENGINE"),
+        'NAME': os.getenv("DATABASE_NAME"),
+        'USER': os.getenv("DATABASE_USER"),
+        'PASSWORD': os.getenv("DATABASE_PASSWORD"),
+        'HOST': os.getenv("DATABASE_HOST"),
+        'PORT': os.getenv("DATABASE_PORT"),
     }
 }
+
 
 
 # Password validation
